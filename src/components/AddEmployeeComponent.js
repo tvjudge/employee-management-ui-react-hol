@@ -40,6 +40,10 @@ const AddEmployeeComponent = () => {
     
             }).catch(error => {
                 //console.log(error)
+                // Check if the error response contains validation errors
+                // and set them in the errors state
+                // This will allow you to display them in the form
+                // or handle them as needed
                 if (error.response && error.response.data) {
                     setErrors(error.response.data); // Capture validation errors
 					alert('Mandatory field can not be blank '); 
